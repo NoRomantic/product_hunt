@@ -6,9 +6,9 @@
 <br>
 <form method="POST" action=" {% url '发布页面' %}" align="center" enctype="multipart/form-data">
     {% csrf_token %}
-    APP名称：
+    标题：
     <br>
-    <input type="text" name="APP名称">
+    <input type="text" name="标题">
     <br>
     <br>
     介绍：
@@ -28,6 +28,7 @@
     大图:
     <input type="file" name="大图">
     <br>
+    {{ 错误 }}
     <br>
     <input class="btn btn-primary" type="submit" value="发布">
 </form>
