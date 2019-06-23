@@ -7,7 +7,8 @@ from django.utils import timezone
 
 
 def product_list(request):
-    return render(request, 'product_list.html')
+    products = Product.objects
+    return render(request, 'product_list.html', {'products': products})
 
 
 @login_required()
